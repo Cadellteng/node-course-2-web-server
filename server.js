@@ -53,6 +53,14 @@ app.get('/about', (req, res) => {
   });
 });
 
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Portfolio Page here',
+    header: 'This is my portfolio page',
+    pageMessage: 'This is portfolio 1'
+  });
+});
+
 //bad - send back json with errorMessage
 app.get('/bad', (req, res) => {
   res.send({
